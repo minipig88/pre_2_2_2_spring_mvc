@@ -4,26 +4,15 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "users")
+@Table(name = "cars")
 public class Car {
     @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String model;
     private String licensePlate;
 
     public Car() {
-    }
-
-    public Car(long id, String model, String licensePlate) {
-        this.id = id;
-        this.model = model;
-        this.licensePlate = licensePlate;
-    }
-
-    public Car(String model, String licensePlate) {
-        this.model = model;
-        this.licensePlate = licensePlate;
     }
 
     public long getId() {
